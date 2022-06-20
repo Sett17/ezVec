@@ -38,15 +38,6 @@ object MatrixTest {
     )
   }
 
-
-  @Test
-  fun _toString() {
-    assertEquals(
-      "0.0 0.0 0.0\n0.0 0.0 0.0\n0.0 0.0 0.0",
-      "${Matrix(3, 3)}"
-    )
-  }
-
   @Test
   fun _equals() {
     assertEquals(

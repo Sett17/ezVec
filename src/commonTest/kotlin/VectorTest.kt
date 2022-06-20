@@ -6,13 +6,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 object VectorTest {
-  @Test
-  fun _toString() {
-    assertEquals(
-      "(0.0, 0.0)",
-      "${Vector(0, 0)}"
-    )
-  }
 
   @Test
   fun _equals() {
