@@ -24,7 +24,6 @@ object MatrixTest {
         row(6.0, 7.0, 8.0)
       }
     )
-    println("MATRIX builder with 3x3 works")
     assertEquals(
       Matrix {
         row(1.1, 1.2, 1.3, 1.4)
@@ -37,7 +36,6 @@ object MatrixTest {
         row(3.1, 3.2, 3.3)
       }
     )
-    println("MATRIX builder row-padding works")
   }
 
 
@@ -47,7 +45,6 @@ object MatrixTest {
       "0.0 0.0 0.0\n0.0 0.0 0.0\n0.0 0.0 0.0",
       "${Matrix(3, 3)}"
     )
-    println("MATRIX toString() for empty matrix works")
   }
 
   @Test
@@ -56,12 +53,10 @@ object MatrixTest {
       Matrix(3, 3),
       Matrix(3, 3)
     )
-    println("MATRIX equals() for same empty matrices works")
     assertNotEquals(
       Matrix(3, 3),
       Matrix(3, 4)
     )
-    println("MATRIX equals() for differently sized empty matrices works")
     assertNotEquals(
       Matrix(3, 3).apply {
         this[0, 0] = 1
@@ -86,12 +81,10 @@ object MatrixTest {
         this[2, 2] = 1
       }
     )
-    println("MATRIX equals() for differently filled matrices works")
   }
 
   @Test
   fun setAndGet() {
-    println("MATRIX set and get for int work")
     val m = Matrix(3, 3).apply {
       this[0, 0] = 100.1
       this[0, 1] = 200.2
@@ -139,7 +132,6 @@ object MatrixTest {
       900.9,
       m[2, 2]
     )
-    println("MATRIX set and get for double works")
   }
 
   @Test
@@ -155,7 +147,6 @@ object MatrixTest {
         )
       }
     }
-    println("MATRIX fill double checked via get works")
   }
 
   @Test
@@ -196,7 +187,6 @@ object MatrixTest {
       },
       m1 + m2
     )
-    println("MATRIX plus works")
   }
 
   @Test
@@ -217,7 +207,6 @@ object MatrixTest {
         row(70, 80, 90)
       }
     )
-    println("MATRIX minus works")
   }
 
   @Test
@@ -238,7 +227,6 @@ object MatrixTest {
         row(5, 6)
       }
     )
-    println("MATRIX multplication works")
   }
 
   @Test
@@ -252,7 +240,6 @@ object MatrixTest {
       },
       Matrix.identity(4)
     )
-    println("MATRIX identity works")
   }
 
   @Test
@@ -273,7 +260,6 @@ object MatrixTest {
         row(50, 60)
       })
     )
-    println("MATRIX augment works")
   }
 
   @Test
@@ -290,7 +276,6 @@ object MatrixTest {
         row(3, 11, 5, 35)
       }.reducedRowEchelonForm
     )
-    println("MATRIX toReducedLowerEchelonForm works")
   }
 
   @Test
@@ -307,7 +292,6 @@ object MatrixTest {
         row(4, 8, 5)
       }.inverse
     )
-    println("MATRIX inverse works")
   }
 
   @Test
